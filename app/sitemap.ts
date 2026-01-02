@@ -1,11 +1,12 @@
 import { MetadataRoute } from 'next';
-import { MOCK_DB } from '@/data';
+import { MOCK_DB, CPT_ENCYCLOPEDIA, PROVIDERS } from '@/data';
 
 /**
  * Dynamic Sitemap for asclepius.us
  * 
  * Generates URLs for:
  * - Static pages (about, how-it-works, glossary, legal)
+ * - Hub pages (procedure and provider aggregation pages)
  * - Dynamic cost pages (procedure/provider/plan combinations)
  */
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -52,8 +53,45 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
     ];
 
-    // 2. Dynamic cost pages - generate from data
+    // 2. Hub pages - higher priority aggregation pages
+    const hubPages: MetadataRoute.Sitemap = [
+        // Procedure index
+        {
+            url: `${baseUrl}/procedure`,
+            lastModified,
+            changeFrequency: 'weekly',
+            priority: 0.85,
+        },
+        // Provider index
+        {
+            url: `${baseUrl}/provider`,
+            lastModified,
+            changeFrequency: 'weekly',
+            priority: 0.85,
+        },
+    ];
 
+    // Procedure hub pages
+    for (const procedure of CPT_ENCYCLOPEDIA) {
+        hubPages.push({
+            url: `${baseUrl}/procedure/${procedure.slug}`,
+            lastModified,
+            changeFrequency: 'weekly',
+            priority: 0.85,
+        });
+    }
+
+    // Provider hub pages
+    for (const provider of PROVIDERS) {
+        hubPages.push({
+            url: `${baseUrl}/provider/${provider.slug}`,
+            lastModified,
+            changeFrequency: 'weekly',
+            priority: 0.85,
+        });
+    }
+
+    // 3. Dynamic cost pages - generate from data
     const costPages: MetadataRoute.Sitemap = [];
 
     // Generate URLs for all procedure/provider/plan combinations
@@ -70,5 +108,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         }
     }
 
-    return [...staticPages, ...costPages];
+    return [...staticPages, ...hubPages, ...costPages];
 }
+
