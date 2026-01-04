@@ -2,6 +2,9 @@
 
 import { ArrowRight } from 'lucide-react';
 
+// Use consistent locale to prevent hydration mismatch
+const formatUSD = (value: number) => value.toLocaleString('en-US');
+
 interface Props {
     liability: number;
     ctaText?: string;
@@ -15,7 +18,7 @@ export default function FloatingActionBar({ liability, ctaText = "Get 0% Financi
             <div className="flex flex-col">
                 <span className="text-xs text-stone-500 font-medium">Your Liability</span>
                 <span className="text-xl font-black text-stone-900">
-                    ${Math.round(liability).toLocaleString()}
+                    ${formatUSD(Math.round(liability))}
                 </span>
             </div>
 

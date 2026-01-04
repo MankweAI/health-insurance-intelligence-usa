@@ -78,10 +78,11 @@ export function ProcedurePricingTable({ providerSlug, procedures }: Props) {
         </button>
     );
 
-    // Get price for currently selected plan
+    // Get price for currently selected plan (or fallback to avgPrice for CMS data)
     const getPriceForPlan = (procedureData: ProcedureWithPricing) => {
         const rate = procedureData.rates.find(r => r.planSlug === selectedPlan);
-        return rate?.negotiatedRate;
+        // Use rate if found, otherwise use avgPrice (CMS aggregated data)
+        return rate?.negotiatedRate || procedureData.avgPrice || undefined;
     };
 
     const categoryColors: Record<string, string> = {

@@ -1,0 +1,19 @@
+{
+    "source": "CMS Machine-Readable File",
+    "payer": "UnitedHealthcare",
+    "payerCode": "uhc",
+    "region": "New York",
+    "regionCode": "ny",
+    "extractedAt": "2026-01-03",
+    "mrfVersion": "1.0",
+    "reportingPeriod": "2025-Q4",
+    "stats": {
+        "rateRecords": 5000,
+        "providers": 2400,
+        "procedures": 10
+    },
+    "files": {
+        "rates": "rates.json",
+        "providers": "providers.json"
+    }
+}

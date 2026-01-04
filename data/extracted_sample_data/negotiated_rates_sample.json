@@ -1,0 +1,1402 @@
+[
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1538943022",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 1577.11,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1659695112",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 1577.11,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1851857114",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 1577.11,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1336600642",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 1577.11,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1023409844",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 1577.11,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1871528323",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 1577.11,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1487071023",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 1577.11,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1790246007",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 1577.11,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1194349266",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2760.0,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1205134301",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2760.0,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1356334098",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2760.0,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1437320017",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2811.0,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "inpatient",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1710973052",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 1501.12,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1285735688",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 1501.12,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1093085276",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 1501.12,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1760037816",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 1501.12,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1609103464",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 1501.12,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1962806190",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 1501.12,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1790187904",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 1501.12,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1659405314",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 1501.12,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1952781262",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 1501.12,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1740716232",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 1501.12,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1396342713",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 1501.12,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1821670936",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 1501.12,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1134999568",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 1501.12,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1437881406",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 1501.12,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1205058294",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 1501.12,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1790330108",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 1501.12,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1235579731",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 1501.12,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1023151644",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 1501.12,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1871762450",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 1501.12,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1760477731",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 1501.12,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1043545536",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 1501.12,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1679021067",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 1501.12,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1942561311",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 1501.12,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1205480738",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 1501.12,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1508973397",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 1501.12,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1831757939",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1104967488",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1427479872",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1225066533",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1255933800",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1518126929",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1881018703",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1740370204",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1740693142",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1891818530",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1578889325",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1578905105",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1134484538",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1679917249",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1457562548",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1700296415",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1720206303",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1033305578",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1912131152",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1063648871",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1538149943",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1538320536",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1407823404",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1053436808",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1992967020",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1881740520",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1629161302",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1992901052",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1174750889",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1043228588",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1962145482",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1700052149",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1154588937",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1992174858",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1841672110",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1164428033",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1114364585",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1902251176",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1760685622",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1124887906",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1275540882",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1063977114",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1992750715",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1477286433",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1104021427",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1861422586",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1003892407",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1144208588",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1922510148",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1497076012",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1215707443",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1396785796",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1942202775",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1861496200",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1376545897",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1073581740",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1083660781",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1720714728",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1609134576",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1033321294",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1356989495",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1699389080",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  },
+  {
+    "procedureCpt": "22612",
+    "providerNpi": "1649432097",
+    "planSlug": "uhc-choice-plus",
+    "negotiatedRate": 2096.73,
+    "contractType": "negotiated",
+    "modifier": null,
+    "placeOfService": "professional",
+    "source": {
+      "extractedAt": "2026-01-03",
+      "mrfVersion": "1.0.0",
+      "reportingPeriod": "2026-01"
+    }
+  }
+]

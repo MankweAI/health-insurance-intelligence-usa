@@ -96,7 +96,7 @@ export function LiabilityCalculator({ baseRate, procedureName, providerName, onL
                             <Info className="w-3.5 h-3.5 text-stone-400" />
                         </button>
                         <span className="font-bold text-stone-900 font-sans text-[15px]">
-                            ${deductibleLeft.toLocaleString()}
+                            ${deductibleLeft.toLocaleString('en-US')}
                         </span>
                     </div>
 

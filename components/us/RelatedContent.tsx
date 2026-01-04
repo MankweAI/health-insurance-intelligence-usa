@@ -14,6 +14,9 @@ import {
     PROVIDERS
 } from '@/data';
 
+// Use consistent locale to prevent hydration mismatch
+const formatUSD = (value: number) => value.toLocaleString('en-US');
+
 interface Props {
     currentProcedure: string;
     currentProvider: string;
@@ -99,10 +102,10 @@ export function RelatedContent({ currentProcedure, currentProvider, currentPlan 
                 {/* Price Ranking Banner */}
                 {priceRank && avgPrice && currentRate && (
                     <div className={`rounded-lg p-4 ${priceRank <= 3
-                            ? 'bg-gradient-to-r from-emerald-50 to-green-50 border border-emerald-100'
-                            : priceRank <= 6
-                                ? 'bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-100'
-                                : 'bg-gradient-to-r from-red-50 to-orange-50 border border-red-100'
+                        ? 'bg-gradient-to-r from-emerald-50 to-green-50 border border-emerald-100'
+                        : priceRank <= 6
+                            ? 'bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-100'
+                            : 'bg-gradient-to-r from-red-50 to-orange-50 border border-red-100'
                         }`}>
                         <div className="flex items-center justify-between">
                             <div>
@@ -116,7 +119,7 @@ export function RelatedContent({ currentProcedure, currentProvider, currentPlan 
                                 <p className={`font-bold text-[15px] font-sans ${currentRate.negotiatedRate < avgPrice ? 'text-emerald-600' : 'text-red-600'
                                     }`}>
                                     {currentRate.negotiatedRate < avgPrice ? '-' : '+'}
-                                    ${Math.abs(Math.round(currentRate.negotiatedRate - avgPrice)).toLocaleString()}
+                                    ${formatUSD(Math.abs(Math.round(currentRate.negotiatedRate - avgPrice)))}
                                 </p>
                             </div>
                         </div>
@@ -144,14 +147,14 @@ export function RelatedContent({ currentProcedure, currentProvider, currentPlan 
                                         {p.rate && (
                                             <div className="flex items-center gap-1 text-right">
                                                 <span className="text-stone-900 text-[13px] font-medium font-sans">
-                                                    ${p.rate.toLocaleString()}
+                                                    ${formatUSD(p.rate)}
                                                 </span>
                                                 {p.priceDiff !== null && (
                                                     <span className={`flex items-center text-[11px] ${p.priceDiff < 0
-                                                            ? 'text-emerald-600'
-                                                            : p.priceDiff > 0
-                                                                ? 'text-red-500'
-                                                                : 'text-stone-400'
+                                                        ? 'text-emerald-600'
+                                                        : p.priceDiff > 0
+                                                            ? 'text-red-500'
+                                                            : 'text-stone-400'
                                                         }`}>
                                                         {p.priceDiff < 0 ? (
                                                             <TrendingDown className="w-3 h-3" />
@@ -195,7 +198,7 @@ export function RelatedContent({ currentProcedure, currentProvider, currentPlan 
                                         <div className="flex items-center gap-3 ml-3">
                                             {rate && (
                                                 <span className="text-stone-900 text-[13px] font-medium font-sans">
-                                                    ${rate.negotiatedRate.toLocaleString()}
+                                                    ${formatUSD(rate.negotiatedRate)}
                                                 </span>
                                             )}
                                             <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-emerald-600 transition-colors" />

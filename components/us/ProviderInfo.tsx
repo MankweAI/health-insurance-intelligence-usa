@@ -4,6 +4,9 @@ import React from 'react';
 import { ExternalLink, Star, Award, Clock, Building2 } from 'lucide-react';
 import { getProviderBySlug, type UsProvider, type ProviderAddress } from '@/data';
 
+// Use consistent locale to prevent hydration mismatch
+const formatUSD = (value: number) => value.toLocaleString('en-US');
+
 interface Props {
     name: string;
     npi: string;
@@ -32,8 +35,8 @@ export function ProviderInfo({ name, npi, address }: Props) {
                     <Star
                         key={star}
                         className={`w-4 h-4 ${star <= rating
-                                ? 'text-amber-400 fill-amber-400'
-                                : 'text-stone-200'
+                            ? 'text-amber-400 fill-amber-400'
+                            : 'text-stone-200'
                             }`}
                     />
                 ))}
@@ -106,7 +109,7 @@ export function ProviderInfo({ name, npi, address }: Props) {
                                 <Building2 className="w-4 h-4 text-stone-400" />
                                 <div>
                                     <p className="text-stone-400 text-[10px] uppercase tracking-wider">Beds</p>
-                                    <p className="font-medium text-stone-900 text-[13px]">{provider.bedCount.toLocaleString()}</p>
+                                    <p className="font-medium text-stone-900 text-[13px]">{provider.bedCount.toLocaleString('en-US')}</p>
                                 </div>
                             </div>
                         )}
@@ -163,10 +166,10 @@ export function ProviderInfo({ name, npi, address }: Props) {
                         <div className="flex items-center justify-between">
                             <span className="text-stone-500 text-[12px] font-sans">Hospital Readmission Rate</span>
                             <span className={`px-2 py-0.5 rounded text-[11px] font-medium ${provider.metrics.readmissionRate === 'Below'
-                                    ? 'bg-green-100 text-green-700'
-                                    : provider.metrics.readmissionRate === 'Above'
-                                        ? 'bg-red-100 text-red-700'
-                                        : 'bg-stone-100 text-stone-600'
+                                ? 'bg-green-100 text-green-700'
+                                : provider.metrics.readmissionRate === 'Above'
+                                    ? 'bg-red-100 text-red-700'
+                                    : 'bg-stone-100 text-stone-600'
                                 }`}>
                                 {provider.metrics.readmissionRate} National Average
                             </span>

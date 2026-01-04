@@ -7,8 +7,12 @@ import {
     getPriceVsAverage,
     getProviderBySlug,
     getPlanBySlug,
-    getCPTBySlug
+    getCPTBySlug,
+    getProviderPriceRanking
 } from '@/data';
+
+// Use consistent locale to prevent hydration mismatch
+const formatUSD = (value: number) => value.toLocaleString('en-US');
 
 interface Props {
     procedureName: string;
@@ -53,6 +57,11 @@ function generateDynamicFAQs(
         ? getPriceVsAverage(procedure.code, provider.npi, planSlug)
         : null;
 
+    // Get ranking data
+    const priceRanking = procedure && provider && planSlug
+        ? getProviderPriceRanking(procedure.code, provider.npi, planSlug)
+        : null;
+
     // ========================================================================
     // 1. PROCEDURE-SPECIFIC MEDICAL FAQs (from CPT Encyclopedia)
     // ========================================================================
@@ -67,23 +76,42 @@ function generateDynamicFAQs(
     }
 
     // ========================================================================
-    // 2. DATA-DRIVEN PRICE FAQs (only if data supports it)
+    // 2. DATA-DRIVEN PRICE FAQs (with specific price ranges and comparisons)
     // ========================================================================
 
-    // If this provider is cheaper than average
-    if (priceComparison && priceComparison.percentDiff < -15) {
+    // National price range FAQ (unique per procedure)
+    if (procedure?.nationalStats) {
+        const { low, high, median } = procedure.nationalStats;
         faqs.push({
-            question: `Why is ${providerName} cheaper than average for ${procedureName}?`,
-            answer: `${providerName}'s negotiated rate for ${procedureName} is ${Math.abs(priceComparison.percentDiff)}% below the average of $${priceComparison.average.toLocaleString()}. This typically reflects their network agreements with ${planName}, their procedural volume, and operational efficiencies. Lower prices don't necessarily mean lower quality—check the quality metrics above.`,
+            question: `What is the typical cost range for ${procedureName} nationally?`,
+            answer: `Nationally, ${procedureName} costs between $${formatUSD(low)} and $${formatUSD(high)}, with a median of $${formatUSD(median)}. ${priceComparison ? `At ${providerName}, the negotiated rate is $${formatUSD(priceComparison.rate)}, which is ${priceComparison.percentDiff < 0 ? `${Math.abs(priceComparison.percentDiff)}% below` : `${priceComparison.percentDiff}% above`} the regional average.` : ''}`,
             type: 'cost'
         });
     }
 
-    // If this provider is MORE expensive than average
+    // Ranking FAQ (unique per provider/plan combination)
+    if (priceRanking && priceComparison) {
+        faqs.push({
+            question: `How does ${providerName}'s price compare to other hospitals?`,
+            answer: `For ${procedureName} with ${planName}, ${providerName} ranks #${priceRanking.rank} out of ${priceRanking.total} in-network providers. Their rate of $${formatUSD(priceComparison.rate)} is ${priceComparison.difference < 0 ? `$${formatUSD(Math.abs(Math.round(priceComparison.difference)))} below` : `$${formatUSD(Math.round(priceComparison.difference))} above`} the average of $${formatUSD(Math.round(priceComparison.average))}. ${priceRanking.rank <= 3 ? 'This places them among the most affordable options.' : priceRanking.percentile >= 75 ? 'This represents above-average value.' : ''}`,
+            type: 'cost'
+        });
+    }
+
+    // If this provider is significantly cheaper than average
+    if (priceComparison && priceComparison.percentDiff < -15) {
+        faqs.push({
+            question: `Why is ${providerName} cheaper than average for ${procedureName}?`,
+            answer: `${providerName}'s negotiated rate of $${formatUSD(priceComparison.rate)} is ${Math.abs(priceComparison.percentDiff)}% below the plan average of $${formatUSD(Math.round(priceComparison.average))}. This typically reflects their volume-based network agreements with ${planName}, operational efficiencies, and regional cost-of-living factors. Lower prices don't necessarily mean lower quality—check the quality metrics above.`,
+            type: 'cost'
+        });
+    }
+
+    // If this provider is significantly MORE expensive than average
     if (priceComparison && priceComparison.percentDiff > 15) {
         faqs.push({
             question: `Why is ${providerName} more expensive than average for ${procedureName}?`,
-            answer: `${providerName}'s rate is ${priceComparison.percentDiff}% above the regional average of $${priceComparison.average.toLocaleString()}. Factors include: academic medical center status, specialized equipment, higher nursing ratios, and complex case expertise. Consider comparing with nearby facilities to find the best value for your needs.`,
+            answer: `${providerName}'s rate of $${formatUSD(priceComparison.rate)} is ${priceComparison.percentDiff}% above the regional average of $${formatUSD(Math.round(priceComparison.average))}. Factors include: academic medical center status, specialized equipment, higher nursing ratios, and complex case expertise. Compare with the ${priceRanking ? priceRanking.total - 1 : 'other'} nearby facilities to find the best value for your needs.`,
             type: 'cost'
         });
     }
@@ -129,7 +157,7 @@ function generateDynamicFAQs(
     if (plan) {
         faqs.push({
             question: `How does ${plan.planName} typically cover ${procedureName}?`,
-            answer: `${plan.planName} is a ${plan.networkType} plan from ${plan.payerName}. With typical cost-sharing, you would pay your remaining deductible (if any), then ${plan.costSharing.typicalCoinsurance}% coinsurance until reaching your $${plan.costSharing.outOfPocketMax.toLocaleString()} out-of-pocket maximum. Use our calculator above to estimate your specific responsibility.`,
+            answer: `${plan.planName} is a ${plan.networkType} plan from ${plan.payerName}. With typical cost-sharing, you would pay your remaining deductible (if any), then ${plan.costSharing.typicalCoinsurance}% coinsurance until reaching your $${formatUSD(plan.costSharing.outOfPocketMax)} out-of-pocket maximum. Use our calculator above to estimate your specific responsibility.`,
             type: 'insurance'
         });
     }
@@ -160,7 +188,7 @@ function generateDynamicFAQs(
 
     if (estimatedCost > 5000) {
         faqs.push({
-            question: `What if I can't afford the estimated $${Math.round(estimatedCost).toLocaleString()} cost?`,
+            question: `What if I can't afford the estimated $${formatUSD(Math.round(estimatedCost))} cost?`,
             answer: `Options include: (1) Ask ${providerName}'s billing department about payment plans—many offer 0% interest financing. (2) Check if you qualify for hospital financial assistance programs. (3) Compare prices at nearby facilities. (4) Ask your doctor if the procedure can be performed at a lower-cost outpatient facility. (5) Consider HSA/FSA funds if available.`,
             type: 'cost'
         });

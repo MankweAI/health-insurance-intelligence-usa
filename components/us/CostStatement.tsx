@@ -25,7 +25,7 @@ export function CostStatement({ procedureName, providerName, lineItems, totalDue
     });
 
     const formatCurrency = (amount: number, isSubtraction?: boolean) => {
-        const formatted = `$${Math.abs(amount).toLocaleString()}`;
+        const formatted = `$${Math.abs(amount).toLocaleString('en-US')}`;
         return isSubtraction ? `-${formatted}` : formatted;
     };
 
@@ -69,9 +69,8 @@ export function CostStatement({ procedureName, providerName, lineItems, totalDue
             {/* Total Due */}
             <div className="border-t-2 border-double border-emerald-500 mt-4 pt-4">
                 <div className="flex justify-between items-center">
-                    <span className="font-bold text-stone-900 font-sans text-[16px]">YOUR TOTAL DUE</span>
                     <span className="font-black text-emerald-600 text-[22px] font-sans tracking-tight">
-                        ${totalDue.toLocaleString()}
+                        ${totalDue.toLocaleString('en-US')}
                     </span>
                 </div>
             </div>

@@ -1,131 +1,207 @@
 import Link from 'next/link';
-import { MOCK_DB } from '@/data';
-import { ArrowRight, Search } from 'lucide-react';
+import { ArrowRight, Shield, Building2, DollarSign, CheckCircle } from 'lucide-react';
 import AppHeader from '@/components/AppHeader';
+import AppFooter from '@/components/AppFooter';
+import { getProceduresWithCMSData, getAllCMSProviders } from '@/data/cms/enriched';
 
 export default function HomePage() {
-  const featuredProcedures = MOCK_DB.procedures.slice(0, 4);
+  // Get stats for UHC NY
+  const uhcNyProcedures = getProceduresWithCMSData();
+  const uhcNyProviders = getAllCMSProviders();
+
+  // Define available payer modules
+  const payerModules = [
+    {
+      id: 'uhc-ny',
+      name: 'UnitedHealthcare',
+      region: 'New York',
+      href: '/uhc-ny',
+      available: true,
+      procedureCount: uhcNyProcedures.length,
+      providerCount: uhcNyProviders.length,
+      color: 'from-blue-500 to-blue-600',
+      bgColor: 'bg-blue-50',
+      textColor: 'text-blue-600',
+      borderColor: 'border-blue-200 hover:border-blue-400',
+    },
+    {
+      id: 'aetna-ca',
+      name: 'Aetna',
+      region: 'California',
+      href: '#',
+      available: false,
+      procedureCount: 0,
+      providerCount: 0,
+      color: 'from-purple-500 to-purple-600',
+      bgColor: 'bg-purple-50',
+      textColor: 'text-purple-600',
+      borderColor: 'border-stone-200',
+    },
+    {
+      id: 'cigna-tx',
+      name: 'Cigna',
+      region: 'Texas',
+      href: '#',
+      available: false,
+      procedureCount: 0,
+      providerCount: 0,
+      color: 'from-orange-500 to-orange-600',
+      bgColor: 'bg-orange-50',
+      textColor: 'text-orange-600',
+      borderColor: 'border-stone-200',
+    },
+    {
+      id: 'bcbs-fl',
+      name: 'Blue Cross Blue Shield',
+      region: 'Florida',
+      href: '#',
+      available: false,
+      procedureCount: 0,
+      providerCount: 0,
+      color: 'from-sky-500 to-sky-600',
+      bgColor: 'bg-sky-50',
+      textColor: 'text-sky-600',
+      borderColor: 'border-stone-200',
+    },
+  ];
 
   return (
-    <div className="min-h-screen" style={{ background: 'linear-gradient(180deg, #F0FDF4 0%, #FFFFFF 100%)' }}>
-
-      {/* Header */}
+    <div className="min-h-screen" style={{ background: '#FAF9F6' }}>
       <AppHeader />
 
-      {/* Hero Section - EXACT REPLICA */}
-      <section className="px-6 pb-12 text-center relative overflow-hidden">
-        {/* Intense Peach Glow Gradient */}
-        <div
-          className="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-[400px] -z-10"
-          style={{
-            background: 'radial-gradient(50% 50% at 50% 40%, rgba(167, 243, 208, 0.6) 0%, rgba(240, 253, 244, 0) 100%)',
-            filter: 'blur(40px)'
-          }}
-        />
-
-        {/* Headline - All Dark */}
-        <h1 className="text-[32px] font-black leading-[1.1] mb-4 tracking-tight" style={{ color: '#1C1917' }}>
-          Know Your Medical Bill<br />
-          Before the Surgery
-        </h1>
-
-        <p className="text-[15px] mb-8 max-w-[260px] mx-auto font-medium" style={{ color: '#78716C' }}>
-          Using real insurer negotiated rates
-        </p>
-
-        {/* Button - Exact styling */}
-        <Link
-          href="/cost/total-hip-replacement/mayo-clinic-rochester/uhc-choice-plus"
-          className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-white font-bold text-[16px] shadow-xl hover:scale-105 transition-transform"
-          style={{
-            background: 'linear-gradient(135deg, #10B981, #059669)',
-            boxShadow: '0 10px 25px -5px rgba(16, 185, 129, 0.4)'
-          }}
-        >
-          Estimate My Bill <ArrowRight className="w-5 h-5" />
-        </Link>
+      {/* Hero Section */}
+      <section className="px-5 pt-10 pb-8 text-center">
+        <div className="max-w-2xl mx-auto">
+          <div className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-700 px-4 py-1.5 rounded-full text-[12px] font-medium mb-5">
+            <Shield className="w-4 h-4" />
+            Real CMS Price Transparency Data
+          </div>
+          <h1 className="text-[36px] font-black text-stone-900 leading-tight mb-4">
+            Know Your Medical Bill<br />Before the Surgery
+          </h1>
+          <p className="text-stone-600 text-[16px] leading-relaxed max-w-md mx-auto">
+            Compare real negotiated rates from insurance companies.
+            See what hospitals actually charge for procedures.
+          </p>
+        </div>
       </section>
 
-      {/* Stacked Cards - "HOW IT WORKS" */}
-      <section className="px-5">
-        <p className="text-[11px] font-bold uppercase tracking-wider mb-4 pl-1" style={{ color: '#A8A29E' }}>
-          HOW IT WORKS
-        </p>
+      {/* Payer Selector */}
+      <section className="px-5 pb-10">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-[13px] font-bold uppercase tracking-wider text-stone-500 mb-4 text-center">
+            Select Your Insurance Network
+          </h2>
 
-        <div className="relative space-y-[-10px]">
-          {/* Card 1 */}
-          <div className="relative z-30 bg-white rounded-2xl p-5 border border-emerald-100 shadow-sm flex items-center gap-4">
-            <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 bg-emerald-50 text-emerald-600 font-bold text-lg">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" /></svg>
-            </div>
-            <div>
-              <h3 className="font-bold text-stone-900">Select Procedure</h3>
-              <p className="text-sm text-stone-500">Shoppable services</p>
-            </div>
+          <div className="grid md:grid-cols-2 gap-4">
+            {payerModules.map((payer) => (
+              <div key={payer.id} className="relative">
+                {payer.available ? (
+                  <Link
+                    href={payer.href}
+                    className={`block bg-white border-2 ${payer.borderColor} rounded-xl p-5 transition-all hover:shadow-lg group`}
+                  >
+                    <div className="flex items-start justify-between">
+                      <div>
+                        <div className={`w-12 h-12 ${payer.bgColor} rounded-xl flex items-center justify-center mb-3`}>
+                          <Building2 className={`w-6 h-6 ${payer.textColor}`} />
+                        </div>
+                        <h3 className="font-bold text-stone-800 text-[17px] mb-0.5">
+                          {payer.name}
+                        </h3>
+                        <p className="text-stone-500 text-[13px]">
+                          {payer.region}
+                        </p>
+                      </div>
+                      <ArrowRight className={`w-5 h-5 ${payer.textColor} opacity-0 group-hover:opacity-100 transition-opacity`} />
+                    </div>
+                    <div className="mt-4 flex items-center gap-4 text-[12px]">
+                      <span className="flex items-center gap-1 text-stone-600">
+                        <CheckCircle className="w-3.5 h-3.5 text-emerald-500" />
+                        {payer.procedureCount} procedures
+                      </span>
+                      <span className="flex items-center gap-1 text-stone-600">
+                        <CheckCircle className="w-3.5 h-3.5 text-emerald-500" />
+                        {payer.providerCount.toLocaleString()} providers
+                      </span>
+                    </div>
+                  </Link>
+                ) : (
+                  <div className={`bg-stone-50 border ${payer.borderColor} rounded-xl p-5 opacity-60`}>
+                    <div className="flex items-start justify-between">
+                      <div>
+                        <div className={`w-12 h-12 bg-stone-100 rounded-xl flex items-center justify-center mb-3`}>
+                          <Building2 className="w-6 h-6 text-stone-400" />
+                        </div>
+                        <h3 className="font-bold text-stone-600 text-[17px] mb-0.5">
+                          {payer.name}
+                        </h3>
+                        <p className="text-stone-400 text-[13px]">
+                          {payer.region}
+                        </p>
+                      </div>
+                      <span className="bg-stone-200 text-stone-500 text-[10px] font-bold uppercase px-2 py-1 rounded">
+                        Coming Soon
+                      </span>
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
+        </div>
+      </section>
 
-          {/* Card 2 */}
-          <div className="relative z-20 bg-white rounded-2xl p-5 border border-emerald-100 shadow-sm flex items-center gap-4 scale-[0.98] opacity-95">
-            <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 bg-teal-50 text-teal-600 font-bold text-lg">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+      {/* How It Works */}
+      <section className="px-5 pb-10">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-[13px] font-bold uppercase tracking-wider text-stone-500 mb-4 text-center">
+            How It Works
+          </h2>
+          <div className="grid md:grid-cols-3 gap-4">
+            <div className="bg-white border border-stone-200 rounded-xl p-5 text-center">
+              <div className="w-10 h-10 bg-emerald-50 rounded-full flex items-center justify-center mx-auto mb-3 text-emerald-600 font-bold">
+                1
+              </div>
+              <h3 className="font-bold text-stone-800 text-[14px] mb-1">Select Insurance</h3>
+              <p className="text-stone-500 text-[12px]">Choose your insurer to see their negotiated rates</p>
             </div>
-            <div>
-              <h3 className="font-bold text-stone-900">Choose Hospital</h3>
-              <p className="text-sm text-stone-500">Compare nearby prices</p>
+            <div className="bg-white border border-stone-200 rounded-xl p-5 text-center">
+              <div className="w-10 h-10 bg-emerald-50 rounded-full flex items-center justify-center mx-auto mb-3 text-emerald-600 font-bold">
+                2
+              </div>
+              <h3 className="font-bold text-stone-800 text-[14px] mb-1">Find Procedure</h3>
+              <p className="text-stone-500 text-[12px]">Browse or search for your medical procedure</p>
             </div>
-          </div>
-
-          {/* Card 3 */}
-          <div className="relative z-10 bg-white rounded-2xl p-5 border border-emerald-100 shadow-sm flex items-center gap-4 scale-[0.96] opacity-90">
-            <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 bg-cyan-50 text-cyan-600 font-bold text-lg">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-            </div>
-            <div>
-              <h3 className="font-bold text-stone-900">See Your Cost</h3>
-              <p className="text-sm text-stone-500">Actual liability estimate</p>
+            <div className="bg-white border border-stone-200 rounded-xl p-5 text-center">
+              <div className="w-10 h-10 bg-emerald-50 rounded-full flex items-center justify-center mx-auto mb-3 text-emerald-600 font-bold">
+                3
+              </div>
+              <h3 className="font-bold text-stone-800 text-[14px] mb-1">Compare Costs</h3>
+              <p className="text-stone-500 text-[12px]">See real prices and calculate your out-of-pocket</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Popular Procedures */}
-      <section className="mt-10 px-5">
-        <p className="text-[11px] font-bold uppercase tracking-wider mb-4 pl-1" style={{ color: '#A8A29E' }}>
-          POPULAR PROCEDURES
-        </p>
-        <div className="flex gap-3 overflow-x-auto pb-6 -mx-5 px-5 no-scrollbar">
-          {featuredProcedures.map((proc) => (
-            <Link
-              key={proc.slug}
-              href={`/cost/${proc.slug}/mayo-clinic-rochester/uhc-choice-plus`}
-              className="shrink-0 w-[140px] bg-white rounded-2xl p-4 border border-stone-100 shadow-sm active:scale-95 transition-transform"
-            >
-              <h3 className="font-bold text-[14px] leading-tight text-stone-900 mb-1">
-                {proc.name}
-              </h3>
-              <p className="text-[12px] text-stone-500">$8k - $45k</p>
-            </Link>
-          ))}
+      {/* Data Source */}
+      <section className="px-5 pb-10">
+        <div className="max-w-3xl mx-auto bg-stone-100 rounded-xl p-5">
+          <div className="flex items-start gap-3">
+            <DollarSign className="w-5 h-5 text-stone-500 mt-0.5" />
+            <div>
+              <h3 className="font-bold text-stone-700 text-[13px] mb-1">Real Pricing Data</h3>
+              <p className="text-stone-500 text-[12px] leading-relaxed">
+                All prices are extracted from Machine-Readable Files (MRFs) published by insurance companies
+                as required by the CMS Price Transparency Rule. Provider information is verified via the
+                NPPES NPI Registry.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Floating Search - Glassmorphism */}
-      <div
-        className="fixed bottom-8 left-6 right-6 flex items-center gap-3 px-5 py-4 rounded-full shadow-2xl z-50 transition-transform active:scale-98"
-        style={{
-          background: 'rgba(255, 255, 255, 0.85)',
-          backdropFilter: 'blur(20px)',
-          WebkitBackdropFilter: 'blur(20px)',
-          border: '1px solid rgba(255, 255, 255, 0.8)'
-        }}
-      >
-        <Search className="w-5 h-5 text-stone-400" />
-        <input
-          type="text"
-          placeholder="Search procedures..."
-          className="flex-1 bg-transparent border-none outline-none text-[16px] placeholder-stone-400 text-stone-800"
-        />
-      </div>
+      <AppFooter />
     </div>
   );
 }

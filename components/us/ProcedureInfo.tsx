@@ -3,6 +3,9 @@
 import React from 'react';
 import { getCPTEntry, type CPTEntry } from '@/data';
 
+// Use consistent locale to prevent hydration mismatch
+const formatUSD = (value: number) => value.toLocaleString('en-US');
+
 interface Props {
     name: string;
     cptCode: string;
@@ -115,11 +118,11 @@ export function ProcedureInfo({ name, cptCode, category }: Props) {
                     <p className="text-stone-400 text-[10px] uppercase tracking-wider mb-2">National Average Range</p>
                     <div className="flex items-end gap-2">
                         <span className="font-bold text-stone-900 text-[16px] font-sans">
-                            ${nationalStats.low.toLocaleString()} – ${nationalStats.high.toLocaleString()}
+                            ${formatUSD(nationalStats.low)} – ${formatUSD(nationalStats.high)}
                         </span>
                         {nationalStats.median && (
                             <span className="text-stone-500 text-[12px] mb-0.5">
-                                (median: ${nationalStats.median.toLocaleString()})
+                                (median: ${formatUSD(nationalStats.median)})
                             </span>
                         )}
                     </div>

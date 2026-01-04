@@ -3,6 +3,9 @@
 import React from 'react';
 import { TrendingDown, TrendingUp, Minus } from 'lucide-react';
 
+// Use a consistent locale to prevent hydration mismatch between server/client
+const formatUSD = (value: number) => value.toLocaleString('en-US');
+
 interface Props {
     low: number;
     high: number;
@@ -26,11 +29,11 @@ export function PriceRangeBadge({ low, high, median, comparisonLabel, size = 'md
     return (
         <div className="inline-flex items-center gap-2">
             <span className={`font-bold text-stone-900 font-sans ${sizeClasses[size]}`}>
-                ${low.toLocaleString()} – ${high.toLocaleString()}
+                ${formatUSD(low)} – ${formatUSD(high)}
             </span>
             {median && (
                 <span className="text-stone-400 text-[11px]">
-                    (median: ${median.toLocaleString()})
+                    (median: ${formatUSD(median)})
                 </span>
             )}
         </div>
@@ -60,7 +63,7 @@ export function PriceBadge({ price, previousPrice, size = 'md' }: SinglePricePro
     return (
         <div className="inline-flex items-center gap-2">
             <span className={`font-bold text-stone-900 font-sans ${sizeClasses[size]}`}>
-                ${price.toLocaleString()}
+                ${formatUSD(price)}
             </span>
             {percentChange !== null && percentChange !== 0 && (
                 <span className={`flex items-center gap-0.5 text-[11px] font-medium ${percentChange < 0 ? 'text-emerald-600' : 'text-red-500'
@@ -93,10 +96,10 @@ export function PriceVsAverageBadge({ currentPrice, averagePrice, label }: Price
 
     return (
         <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-[12px] font-medium ${isBelow
-                ? 'bg-emerald-50 text-emerald-700'
-                : difference === 0
-                    ? 'bg-stone-100 text-stone-600'
-                    : 'bg-red-50 text-red-700'
+            ? 'bg-emerald-50 text-emerald-700'
+            : difference === 0
+                ? 'bg-stone-100 text-stone-600'
+                : 'bg-red-50 text-red-700'
             }`}>
             {isBelow ? (
                 <TrendingDown className="w-3.5 h-3.5" />
@@ -106,7 +109,7 @@ export function PriceVsAverageBadge({ currentPrice, averagePrice, label }: Price
                 <TrendingUp className="w-3.5 h-3.5" />
             )}
             <span>
-                {isBelow ? '' : '+'}${difference.toLocaleString()} ({isBelow ? '' : '+'}{percentDiff}%)
+                {isBelow ? '' : '+'}${formatUSD(difference)} ({isBelow ? '' : '+'}{percentDiff}%)
             </span>
             {label && <span className="text-stone-400 ml-1">{label}</span>}
         </div>

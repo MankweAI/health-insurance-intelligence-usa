@@ -10,6 +10,7 @@ import { ProviderInfo } from '@/components/us/ProviderInfo';
 import { FAQSection } from '@/components/us/FAQSection';
 import { RelatedContent } from '@/components/us/RelatedContent';
 import { EEATFooter } from '@/components/us/EEATSignals';
+import { PriceContextBadge } from '@/components/us/PriceContextBadge';
 import AppHeader from '@/components/AppHeader';
 import AppFooter from '@/components/AppFooter';
 
@@ -17,9 +18,18 @@ interface PageProps {
     procedure: string;
     provider: string;
     plan: string;
+    // Server-computed pricing data to avoid hydration mismatch
+    priceRanking: { rank: number; total: number; percentile: number } | null;
+    priceVsAvg: { rate: number; average: number; difference: number; percentDiff: number } | null;
 }
 
-export default function CostPageClient({ procedure: procedureSlug, provider: providerSlug, plan: planSlug }: PageProps) {
+export default function CostPageClient({
+    procedure: procedureSlug,
+    provider: providerSlug,
+    plan: planSlug,
+    priceRanking,
+    priceVsAvg
+}: PageProps) {
     const [liability, setLiability] = useState(0);
     const proc = getProcedure(procedureSlug);
     const prov = getProvider(providerSlug);
@@ -47,7 +57,7 @@ export default function CostPageClient({ procedure: procedureSlug, provider: pro
                             Your Estimated {proc.name} Cost
                         </p>
                         <div className="font-black text-[42px] tracking-tight leading-none text-stone-900 font-sans">
-                            ${liability > 0 ? Math.round(liability).toLocaleString() : '8,420'}
+                            ${liability > 0 ? Math.round(liability).toLocaleString('en-US') : '8,420'}
                         </div>
                     </div>
 
@@ -57,6 +67,18 @@ export default function CostPageClient({ procedure: procedureSlug, provider: pro
                             Estimated patient responsibility based on average procedure costs and your current plan coverage.
                         </p>
                     </div>
+
+                    {/* Price Context Badge - Market Comparison (SEO Value) */}
+                    {priceRanking && priceVsAvg && (
+                        <PriceContextBadge
+                            rank={priceRanking.rank}
+                            total={priceRanking.total}
+                            percentile={priceRanking.percentile}
+                            difference={priceVsAvg.difference}
+                            percentDiff={priceVsAvg.percentDiff}
+                            average={priceVsAvg.average}
+                        />
+                    )}
                 </div>
             </section>
 

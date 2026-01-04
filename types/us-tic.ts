@@ -213,6 +213,75 @@ export interface NegotiatedRate {
 }
 
 // ============================================================================
+// CMS AGGREGATED RATE TYPES (Real Extracted Data)
+// ============================================================================
+
+export interface PriceStats {
+  /** Minimum negotiated rate */
+  min: number;
+  /** Maximum negotiated rate */
+  max: number;
+  /** Median negotiated rate */
+  median: number;
+  /** Mean negotiated rate */
+  mean: number;
+  /** Number of rate observations */
+  count: number;
+}
+
+export interface AggregatedRate {
+  /** CPT/HCPCS code */
+  procedureCpt: string;
+
+  /** Provider NPI */
+  providerNpi: string;
+
+  /** Plan slug */
+  planSlug: string;
+
+  /** Aggregated price statistics */
+  priceStats: PriceStats;
+
+  /** When this data was aggregated */
+  aggregatedAt: string;
+
+  /** Data source identifier */
+  dataSource: string;
+}
+
+// ============================================================================
+// CMS PROVIDER TYPES (NPPES Enriched)
+// ============================================================================
+
+export interface CMSProviderAddress {
+  line1: string;
+  line2: string;
+  city: string;
+  state: string;
+  zip: string;
+}
+
+export interface CMSProvider {
+  /** National Provider Identifier */
+  npi: string;
+
+  /** Provider name (organization or individual) */
+  name: string;
+
+  /** Provider type */
+  providerType: 'organization' | 'individual';
+
+  /** Credential/specialty */
+  specialty: string;
+
+  /** Physical address */
+  address: CMSProviderAddress;
+
+  /** Contact phone */
+  phone: string;
+}
+
+// ============================================================================
 // REGIONAL / GEOGRAPHIC TYPES
 // ============================================================================
 
