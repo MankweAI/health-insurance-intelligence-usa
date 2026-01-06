@@ -59,7 +59,7 @@ export default function AppFooter() {
 
                 {/* Disclaimer */}
                 <p className="text-stone-400 text-[10px] mt-3 leading-relaxed">
-                    Cost estimates are for informational purposes only. Always verify with your healthcare provider and insurance company.
+                    This tool displays data from official price transparency filings. It is not financial or medical advice. Verify all information with your healthcare provider and insurer.
                 </p>
             </div>
         </footer>

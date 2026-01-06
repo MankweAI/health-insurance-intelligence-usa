@@ -11,6 +11,8 @@ import { EEATFooter } from '@/components/us/EEATSignals';
 import { PriceContextBadge } from '@/components/us/PriceContextBadge';
 import AppHeader from '@/components/AppHeader';
 import AppFooter from '@/components/AppFooter';
+import DataSourceBadge from '@/components/DataSourceBadge';
+import { UHC_NY_METADATA } from '@/data/uhc_ny';
 import { CPTEntry } from '@/types/us-tic';
 
 interface CostPageContentProps {
@@ -91,9 +93,19 @@ export default function CostPageContent({
 
                     {/* Footer Note */}
                     <div className="border-t border-dashed border-stone-300 pt-3 mt-2">
-                        <p className="text-stone-400 text-[11px] leading-relaxed text-center">
+                        <p className="text-stone-400 text-[11px] leading-relaxed text-center mb-2">
                             Based on CMS Price Transparency data. Your actual cost depends on your deductible and coinsurance.
                         </p>
+                        <div className="flex justify-center">
+                            <DataSourceBadge
+                                recordCount={priceStats.count}
+                                extractedDate={UHC_NY_METADATA.mrfSource.extractedDate}
+                                sourceUrl={UHC_NY_METADATA.mrfSource.url}
+                                sourceName={UHC_NY_METADATA.mrfSource.displayName}
+                                dataYear={UHC_NY_METADATA.mrfSource.dataYear}
+                                compact={true}
+                            />
+                        </div>
                     </div>
 
                     {/* Price Context Badge - Market Comparison */}

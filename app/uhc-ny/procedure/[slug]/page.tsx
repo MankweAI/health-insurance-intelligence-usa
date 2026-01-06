@@ -6,11 +6,13 @@ import {
     CPT_ENCYCLOPEDIA
 } from '@/data';
 import { getProcedureWithCMSProviders, ProviderWithCMSPricing } from '@/data/cms/enriched';
+import { UHC_NY_METADATA } from '@/data/uhc_ny';
 import { ProcedureHero, ProcedureDetails, ProcedureFAQs } from '@/components/procedure/ProcedureHero';
 import { EEATFooter } from '@/components/us/EEATSignals';
 import AppHeader from '@/components/AppHeader';
 import AppFooter from '@/components/AppFooter';
 import { UhcNyProviderPricingTable } from '@/components/uhc-ny/ProviderPricingTable';
+import DataSourceBadge from '@/components/DataSourceBadge';
 
 interface Props {
     params: Promise<{
@@ -153,6 +155,17 @@ export default async function UhcNyProcedureSlugPage({ params }: Props) {
 
                     {/* Provider Pricing Table - UHC-NY specific */}
                     <section className="mb-6">
+                        {/* Data Source Badge for YMYL */}
+                        <div className="mb-4">
+                            <DataSourceBadge
+                                recordCount={cmsData?.providers.reduce((sum, p) => sum + p.priceStats.count, 0) || 0}
+                                providerCount={cmsData?.providers.length || 0}
+                                extractedDate={UHC_NY_METADATA.mrfSource.extractedDate}
+                                sourceUrl={UHC_NY_METADATA.mrfSource.url}
+                                sourceName={UHC_NY_METADATA.mrfSource.displayName}
+                                dataYear={UHC_NY_METADATA.mrfSource.dataYear}
+                            />
+                        </div>
                         <UhcNyProviderPricingTable
                             procedureSlug={resolvedParams.slug}
                             providers={providersWithPricing}

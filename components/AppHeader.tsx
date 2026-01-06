@@ -15,7 +15,7 @@ export default function AppHeader() {
                         </div>
                         <div>
                             <span className="font-bold text-stone-900 text-[14px] font-mono tracking-tight">asclepius.us</span>
-                            <p className="text-stone-400 text-[10px] uppercase tracking-wider font-sans">Medical Price Intelligence</p>
+                            <p className="text-stone-400 text-[10px] uppercase tracking-wider font-sans">Transparency Data Explorer</p>
                         </div>
                     </div>
 

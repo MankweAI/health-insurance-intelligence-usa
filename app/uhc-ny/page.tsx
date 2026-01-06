@@ -1,9 +1,11 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowRight, Building2, Stethoscope, DollarSign } from 'lucide-react';
+import { ArrowRight, Building2, Stethoscope } from 'lucide-react';
 import { getProceduresWithCMSData, getAllCMSProviders } from '@/data/cms/enriched';
+import { UHC_NY_METADATA } from '@/data/uhc_ny';
 import AppHeader from '@/components/AppHeader';
 import AppFooter from '@/components/AppFooter';
+import DataSourceBadge from '@/components/DataSourceBadge';
 
 export const metadata: Metadata = {
     title: 'UHC New York Healthcare Costs | Asclepius',
@@ -130,18 +132,15 @@ export default function UhcNyLandingPage() {
 
             {/* Data Source */}
             <section className="px-5 pb-10">
-                <div className="max-w-3xl mx-auto bg-stone-100 rounded-xl p-5">
-                    <div className="flex items-start gap-3">
-                        <DollarSign className="w-5 h-5 text-stone-500 mt-0.5" />
-                        <div>
-                            <h3 className="font-bold text-stone-700 text-[13px] mb-1">Data Source</h3>
-                            <p className="text-stone-500 text-[12px] leading-relaxed">
-                                Pricing data extracted from UnitedHealthcare's Machine-Readable File (MRF)
-                                as required by the CMS Price Transparency Rule. Provider information
-                                enriched via the NPPES NPI Registry.
-                            </p>
-                        </div>
-                    </div>
+                <div className="max-w-3xl mx-auto">
+                    <DataSourceBadge
+                        recordCount={UHC_NY_METADATA.rateCount}
+                        providerCount={UHC_NY_METADATA.providerCount}
+                        extractedDate={UHC_NY_METADATA.mrfSource.extractedDate}
+                        sourceUrl={UHC_NY_METADATA.mrfSource.url}
+                        sourceName={UHC_NY_METADATA.mrfSource.displayName}
+                        dataYear={UHC_NY_METADATA.mrfSource.dataYear}
+                    />
                 </div>
             </section>
 

@@ -4,7 +4,7 @@ import AppFooter from '@/components/AppFooter';
 
 export const metadata: Metadata = {
     title: 'How It Works | asclepius.us',
-    description: 'Learn how asclepius.us calculates your medical procedure costs using CMS price transparency data and your insurance plan details.',
+    description: 'Learn how asclepius.us aggregates hospital rate filings from official CMS price transparency data.',
 };
 
 export default function HowItWorksPage() {
@@ -19,7 +19,7 @@ export default function HowItWorksPage() {
                         </div>
                         <div>
                             <span className="font-bold text-stone-900 text-[14px] font-mono tracking-tight">asclepius.us</span>
-                            <p className="text-stone-400 text-[10px] uppercase tracking-wider font-sans">Medical Price Intelligence</p>
+                            <p className="text-stone-400 text-[10px] uppercase tracking-wider font-sans">Transparency Data Explorer</p>
                         </div>
                     </Link>
                 </div>
@@ -38,7 +38,7 @@ export default function HowItWorksPage() {
                     <div className="text-center py-4">
                         <h1 className="font-bold text-stone-900 text-[24px] font-sans mb-2">How It Works</h1>
                         <p className="text-stone-500 text-[14px] font-sans">
-                            Three steps to understanding your true medical costs
+                            Three steps to exploring medical rate data
                         </p>
                     </div>
                 </section>

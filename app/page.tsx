@@ -74,14 +74,14 @@ export default function HomePage() {
         <div className="max-w-2xl mx-auto">
           <div className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-700 px-4 py-1.5 rounded-full text-[12px] font-medium mb-5">
             <Shield className="w-4 h-4" />
-            Real CMS Price Transparency Data
+            Official Transparency Data
           </div>
           <h1 className="text-[36px] font-black text-stone-900 leading-tight mb-4">
-            Know Your Medical Bill<br />Before the Surgery
+            Search Hospital<br />Rate Filings
           </h1>
           <p className="text-stone-600 text-[16px] leading-relaxed max-w-md mx-auto">
-            Compare real negotiated rates from insurance companies.
-            See what hospitals actually charge for procedures.
+            Browse negotiated rates from publicly filed Machine-Readable Files.
+            Explore what hospitals report to the government.
           </p>
         </div>
       </section>

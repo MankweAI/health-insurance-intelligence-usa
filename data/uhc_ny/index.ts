@@ -24,6 +24,13 @@ export const UHC_NY_METADATA = {
     rateCount: UHC_NY_RATES.length,
     providerCount: Object.keys(UHC_NY_PROVIDERS).length,
     planSlug: 'uhc-choice-plus',
+    // Data provenance for YMYL defensibility
+    mrfSource: {
+        url: 'https://transparency-in-coverage.uhc.com/',
+        displayName: 'UHC Transparency in Coverage Portal',
+        extractedDate: '2026-01-03',
+        dataYear: '2026',
+    },
 };
 
 /**

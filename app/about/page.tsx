@@ -4,7 +4,7 @@ import AppFooter from '@/components/AppFooter';
 
 export const metadata: Metadata = {
     title: 'About | asclepius.us',
-    description: 'Learn about asclepius.us, a medical price transparency tool built to help Americans understand their healthcare costs before they receive care.',
+    description: 'Learn about asclepius.us, a medical rate data explorer built to help Americans search official healthcare price transparency filings.',
 };
 
 export default function AboutPage() {
@@ -19,7 +19,7 @@ export default function AboutPage() {
                         </div>
                         <div>
                             <span className="font-bold text-stone-900 text-[14px] font-mono tracking-tight">asclepius.us</span>
-                            <p className="text-stone-400 text-[10px] uppercase tracking-wider font-sans">Medical Price Intelligence</p>
+                            <p className="text-stone-400 text-[10px] uppercase tracking-wider font-sans">Transparency Data Explorer</p>
                         </div>
                     </Link>
                 </div>
@@ -59,7 +59,7 @@ export default function AboutPage() {
                             >
                                 Hospital Price Transparency Rule
                             </a>
-                            and transform it into actionable cost estimates personalized to your insurance plan.
+                            and make it searchable for research purposes.
                         </p>
                     </div>
                 </section>
@@ -99,7 +99,7 @@ export default function AboutPage() {
                         </div>
                     </div>
                     <div className="space-y-4 text-stone-600 text-[14px] font-sans leading-relaxed">
-                        <p>Our cost estimates are powered by:</p>
+                        <p>Our data is sourced from:</p>
                         <ul className="space-y-2 ml-4">
                             <li className="flex items-start gap-2">
                                 <span className="text-emerald-500">✓</span>
@@ -146,6 +146,6 @@ export default function AboutPage() {
 
             {/* Footer */}
             <AppFooter />
-        </div>
+        </div >
     );
 }

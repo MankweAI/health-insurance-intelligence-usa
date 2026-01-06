@@ -9,8 +9,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Asclepius.US | Medical Bill Cost Calculator',
-  description: 'Calculate your actual out-of-pocket medical costs using real negotiated rates from Transparency in Coverage data.',
+  title: 'Asclepius.US | Medical Rate Data Explorer',
+  description: 'Search and browse hospital negotiated rates from official Transparency in Coverage filings.',
 };
 
 // Site-wide Schema: Organization + WebSite with SearchAction
@@ -29,7 +29,7 @@ function SiteSchema() {
           "@type": "ImageObject",
           "url": "https://asclepius.us/logo.png"
         },
-        "description": "Medical price transparency tool helping Americans understand healthcare costs before receiving care.",
+        "description": "Medical rate data explorer helping Americans browse official healthcare price transparency filings.",
         "founder": {
           "@type": "Person",
           "name": "Mankwe Mokgabudi",
@@ -48,7 +48,7 @@ function SiteSchema() {
         "@id": "https://asclepius.us/#website",
         "url": "https://asclepius.us",
         "name": "Asclepius.US",
-        "description": "Medical Bill Cost Calculator - Know your costs before you receive care",
+        "description": "Medical Rate Data Explorer - Browse official hospital price filings",
         "publisher": {
           "@id": "https://asclepius.us/#organization"
         },
