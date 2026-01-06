@@ -13,6 +13,7 @@ import AppHeader from '@/components/AppHeader';
 import AppFooter from '@/components/AppFooter';
 import { UhcNyProviderPricingTable } from '@/components/uhc-ny/ProviderPricingTable';
 import DataSourceBadge from '@/components/DataSourceBadge';
+import ExpertCTA from '@/components/ExpertCTA';
 
 interface Props {
     params: Promise<{
@@ -146,6 +147,15 @@ export default async function UhcNyProcedureSlugPage({ params }: Props) {
                     {/* Hero Section */}
                     <section className="mb-6">
                         <ProcedureHero procedure={procedure} />
+                    </section>
+
+                    {/* Expert CTA - Prime Position */}
+                    <section className="mb-6">
+                        <ExpertCTA
+                            planName="UHC Choice Plus (New York)"
+                            question={`How much should I pay for ${procedure.name}?`}
+                            context={`Procedure: ${procedure.code} | ${procedure.name}`}
+                        />
                     </section>
 
                     {/* Preparation & Risks */}

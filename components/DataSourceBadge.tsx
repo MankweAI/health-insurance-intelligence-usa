@@ -1,6 +1,6 @@
 'use client';
 
-import { ExternalLink, Database, Calendar } from 'lucide-react';
+import { ExternalLink, Database, Calendar, AlertTriangle } from 'lucide-react';
 
 interface DataSourceBadgeProps {
     recordCount: number;
@@ -56,6 +56,13 @@ export default function DataSourceBadge({
                     Source
                     <ExternalLink className="w-3 h-3" />
                 </a>
+                <a
+                    href="mailto:data@asclepius.us?subject=Data%20Error%20Report"
+                    className="flex items-center gap-1 text-amber-600 hover:underline"
+                >
+                    Report Error
+                    <AlertTriangle className="w-3 h-3" />
+                </a>
             </div>
         );
     }
@@ -91,6 +98,13 @@ export default function DataSourceBadge({
                     >
                         View official source: {sourceName}
                         <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
+                    <a
+                        href="mailto:data@asclepius.us?subject=Data%20Error%20Report"
+                        className="inline-flex items-center gap-1.5 mt-1 text-[11px] text-amber-600 hover:text-amber-700 hover:underline"
+                    >
+                        <AlertTriangle className="w-3 h-3" />
+                        Report a data error
                     </a>
                 </div>
             </div>

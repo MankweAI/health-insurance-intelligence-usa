@@ -143,6 +143,20 @@ export default function ExpertModal({
                             </div>
                         )}
 
+                        {/* TCPA CONSENT - REQUIRED FOR US COMPLIANCE */}
+                        <div className="flex items-start gap-3 my-4 p-3 bg-slate-50 rounded-lg border border-slate-100">
+                            <input
+                                type="checkbox"
+                                required
+                                id="tcpa-consent"
+                                className="mt-1 w-4 h-4 text-emerald-600 border-gray-300 rounded focus:ring-emerald-500"
+                            />
+                            <label htmlFor="tcpa-consent" className="text-[10px] text-slate-500 leading-tight">
+                                I agree to receive automated marketing calls and texts from Intellihealth partners at the number provided.
+                                Consent is not a condition of purchase. Message/data rates may apply.
+                            </label>
+                        </div>
+
                         <button
                             type="submit"
                             disabled={status === 'submitting' || phone.length < 10 || name.length < 2}

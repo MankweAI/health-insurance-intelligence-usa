@@ -83,7 +83,7 @@ export default function TrustFooter() {
                             <Link href="/disclaimer" className="hover:text-slate-600 transition-colors">Disclaimer</Link>
                             <Link href="/privacy" className="hover:text-slate-600 transition-colors">Privacy Policy</Link>
                             <Link href="/terms" className="hover:text-slate-600 transition-colors">Terms of Use</Link>
-                            <span>© {currentYear} Intellihealth</span>
+                            <span>© {currentYear} Asclepius.us</span>
                         </div>
 
                         {/* Explicit Disclaimer Text (Critical for YMYL) */}

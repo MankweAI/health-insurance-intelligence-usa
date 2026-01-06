@@ -8,6 +8,7 @@ import AppHeader from '@/components/AppHeader';
 import AppFooter from '@/components/AppFooter';
 import { UsProvider } from '@/types/us-tic';
 import { UhcNyProcedurePricingTable } from '@/components/uhc-ny/ProcedurePricingTable';
+import ExpertCTA from '@/components/ExpertCTA';
 
 interface Props {
     params: Promise<{
@@ -150,6 +151,15 @@ export default async function UhcNyProviderSlugPage({ params }: Props) {
                     {/* Hero Section */}
                     <section className="mb-6">
                         <ProviderHero provider={usProvider} />
+                    </section>
+
+                    {/* Expert CTA - Prime Position */}
+                    <section className="mb-6">
+                        <ExpertCTA
+                            planName="UHC Choice Plus (New York)"
+                            question={`Does ${provider.name} accept my insurance?`}
+                            context={`Provider: ${provider.name} | NPI: ${usProvider.npi}`}
+                        />
                     </section>
 
                     {/* Procedure Pricing Table */}

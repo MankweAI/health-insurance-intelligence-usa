@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import { LiabilityCalculator } from '@/components/us/LiabilityCalculator';
-import { LeadCaptureForm } from '@/components/us/LeadCaptureForm';
 import { ProcedureInfo } from '@/components/us/ProcedureInfo';
 import { ProviderInfo } from '@/components/us/ProviderInfo';
 import { FAQSection } from '@/components/us/FAQSection';
@@ -12,8 +11,10 @@ import { PriceContextBadge } from '@/components/us/PriceContextBadge';
 import AppHeader from '@/components/AppHeader';
 import AppFooter from '@/components/AppFooter';
 import DataSourceBadge from '@/components/DataSourceBadge';
+import ExpertModal from '@/components/ExpertModal';
 import { UHC_NY_METADATA } from '@/data/uhc_ny';
 import { CPTEntry } from '@/types/us-tic';
+import { Phone } from 'lucide-react';
 
 interface CostPageContentProps {
     procedure: CPTEntry;
@@ -67,6 +68,7 @@ export default function CostPageContent({
     priceContext
 }: CostPageContentProps) {
     const [liability, setLiability] = useState(0);
+    const [isExpertModalOpen, setIsExpertModalOpen] = useState(false);
 
     return (
         <div className="min-h-screen pb-24" style={{ background: '#FAF9F6' }}>
@@ -132,14 +134,41 @@ export default function CostPageContent({
                 </div>
             </section>
 
-            {/* 4. LEAD CAPTURE CTA */}
+            {/* 4. EXPERT CONSULTATION CTA - Prime Position */}
             <section className="px-5 mt-4">
-                <LeadCaptureForm
-                    procedureName={procedure.name}
-                    currentPlanName={planName}
-                    estimatedCost={liability || rate}
-                />
+                <div className="bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-2xl p-5 text-white shadow-lg">
+                    <div className="text-center">
+                        <p className="text-emerald-100 text-[12px] uppercase tracking-wider font-medium mb-2">
+                            Not Sure This Is Right For You?
+                        </p>
+                        <h3 className="text-[18px] font-bold mb-2">
+                            Talk to a Licensed Specialist
+                        </h3>
+                        <p className="text-emerald-100 text-[13px] mb-4 max-w-sm mx-auto">
+                            Get personalized advice on whether this provider aligns with your coverage.
+                        </p>
+                        <button
+                            onClick={() => setIsExpertModalOpen(true)}
+                            className="inline-flex items-center gap-2 bg-white text-emerald-700 px-6 py-3 rounded-xl font-bold text-[14px] hover:bg-emerald-50 active:scale-95 transition-all shadow-md"
+                        >
+                            <Phone className="w-4 h-4" />
+                            Request Free Callback
+                        </button>
+                        <p className="text-emerald-200 text-[10px] mt-3">
+                            No obligation • Licensed professionals • 24h response
+                        </p>
+                    </div>
+                </div>
             </section>
+
+            {/* Expert Modal */}
+            <ExpertModal
+                isOpen={isExpertModalOpen}
+                onClose={() => setIsExpertModalOpen(false)}
+                planName={planName}
+                initialQuestion={`Is ${provider.name} a good choice for ${procedure.name}?`}
+                expertContext={`Procedure: ${procedure.code} | Provider: ${provider.npi} | Rate: $${rate}`}
+            />
 
             {/* 5. ABOUT THIS PROCEDURE */}
             <section className="px-5 mt-4">
