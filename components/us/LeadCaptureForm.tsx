@@ -106,6 +106,20 @@ export function LeadCaptureForm({ procedureName, currentPlanName, estimatedCost 
                     className="w-full px-4 py-3 rounded-lg border border-stone-200 text-[14px] font-sans placeholder:text-stone-400 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500"
                 />
 
+                {/* TCPA Consent (Required for US Compliance) */}
+                <div className="flex items-start gap-3 p-3 bg-stone-50 rounded-lg border border-stone-100">
+                    <input
+                        type="checkbox"
+                        required
+                        id="tcpa-consent"
+                        className="mt-1 w-4 h-4 text-emerald-600 border-stone-300 rounded focus:ring-emerald-500"
+                    />
+                    <label htmlFor="tcpa-consent" className="text-[10px] text-stone-500 leading-tight font-sans">
+                        I agree to receive automated marketing calls and texts from Asclepius partners at the number provided.
+                        Consent is not a condition of purchase. Message/data rates may apply.
+                    </label>
+                </div>
+
                 <button
                     type="submit"
                     disabled={loading}

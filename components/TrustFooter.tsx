@@ -25,12 +25,12 @@ export default function TrustFooter() {
                             </span>
                         </div>
                         <p className="text-xs text-slate-500 leading-relaxed max-w-md">
-                            Intellihealth is an algorithmic analysis tool designed to simplify medical scheme complexity.
+                            Asclepius is an algorithmic analysis tool designed to simplify healthcare pricing complexity.
                             We are not a financial services provider.
                         </p>
                         <div className="flex items-center gap-2 text-[10px] text-slate-400 bg-white/50 px-3 py-2 rounded-lg border border-slate-100 w-fit">
                             <Lock className="w-3 h-3" />
-                            <span>SSL Secured & POPIA Compliant</span>
+                            <span>SSL Secured &amp; HIPAA Standards</span>
                         </div>
                     </div>
 
@@ -38,16 +38,16 @@ export default function TrustFooter() {
                     <div className="lg:col-span-4 space-y-4">
                         <h6 className="text-xs font-bold text-slate-900 uppercase tracking-wider">Data Provenance</h6>
                         <p className="text-xs text-slate-500 leading-relaxed">
-                            Benefit structures and premiums are sourced directly from the 2026 registered rules of the
+                            Pricing data is extracted from Machine-Readable Files (MRF) as mandated by the
                             <a
-                                href="https://www.medicalschemes.co.za/"
+                                href="https://www.cms.gov/"
                                 target="_blank"
                                 rel="noopener noreferrer nofollow"
                                 className="inline-flex items-center gap-1 text-blue-600 hover:underline font-medium ml-1"
                             >
-                                Council for Medical Schemes (CMS) <ExternalLink className="w-3 h-3" />
+                                Centers for Medicare & Medicaid Services <ExternalLink className="w-3 h-3" />
                             </a>
-                            . While rigorous, this data serves as a guide and does not replace the official scheme brochure.
+                            . While rigorous, this data serves as a guide and does not replace official plan documents.
                         </p>
                     </div>
 
@@ -88,8 +88,8 @@ export default function TrustFooter() {
 
                         {/* Explicit Disclaimer Text (Critical for YMYL) */}
                         <div className="md:max-w-md text-[10px] text-slate-400 leading-relaxed text-right">
-                            <span className="font-bold">Important:</span> Information presented is factual (FAIS definition) and does not constitute financial advice.
-                            Consult an accredited FSP before changing cover.
+                            <span className="font-bold">Important:</span> Information is for general informational purposes only and does not constitute financial or medical advice.
+                            Consult a licensed professional before making healthcare decisions.
                         </div>
                     </div>
                 </div>

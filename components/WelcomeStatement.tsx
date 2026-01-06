@@ -18,7 +18,7 @@ export default function WelcomeStatement({ persona }: { persona: Persona }) {
         : PLACEHOLDER_IMAGE;
 
     // SEO alt text pattern
-    const imageAlt = `Medical aid strategy for ${persona.display_title || persona.meta.title}`;
+    const imageAlt = `Healthcare rate data for ${persona.display_title || persona.meta.title}`;
 
     // Human-first narrative with proper fallback chain
     const narrative = persona.human_insight

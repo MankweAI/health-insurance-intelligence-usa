@@ -167,7 +167,7 @@ export default function ExpertModal({
                         </button>
 
                         <p className="text-[10px] text-center text-slate-400 font-medium">
-                            Private & Secure. Accredited Medical Aid Specialist.
+                            Private &amp; Secure. Licensed Health Insurance Specialist.
                         </p>
                     </form>
                 ) : (

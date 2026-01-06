@@ -2,9 +2,9 @@ import { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
     return {
-        name: 'INTELLIHEALTH Virtual Actuary',
-        short_name: 'INTELLIHEALTH',
-        description: 'AI-powered medical aid diagnosis and comparison.',
+        name: 'Asclepius Healthcare Rate Explorer',
+        short_name: 'Asclepius',
+        description: 'Explore hospital negotiated rates from official CMS transparency filings.',
         start_url: '/',
         display: 'standalone',
         background_color: '#F1F5F9',
